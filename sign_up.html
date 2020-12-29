@@ -1,105 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Sign up</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../Css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../Css/font-size.css">
-	<link rel="stylesheet" type="text/css" href="../Css/sign_in.css">
-	<link rel="stylesheet" type="text/css" href="../Css/font.css">
-
-</head>
-<body>
-	
-	<div class="limiter">
-	<div class="container-login100">
-	<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
-	<form class="login100-form validate-form">
-				<span class="login100-form-title p-b-55">
-					Sign up
-				</span>
-
-            <div class="wrap-input100 validate-input m-b-16">
-              <input class="input100" type="text" name="name" placeholder="Frist Name">
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-envelope"></span>
-              </span>
-            </div>
-
-            <div class="wrap-input100 validate-input m-b-16">
-                <input class="input100" type="text" name="name" placeholder="Last Name">
-                <span class="focus-input100"></span>
-                <span class="symbol-input100">
-                  <span class="lnr lnr-envelope"></span>
-                </span>
-            </div>
+  <head>
+    <meta charset="UTF-8">
+      <title>sign up</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" rel="stylesheet" type="text/css" />
+    </meta>
+  </head>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" />
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" />
+	<link href="css/Sass/style.css" rel="stylesheet" />
 
 
-			<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
-				<input class="input100" type="text" name="email" placeholder="Email">
-				<span class="focus-input100"></span>
-				<span class="symbol-input100">
-				<span class="lnr lnr-envelope"></span>
-			    </span>
-			</div>
-
-			<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-				<input class="input100" type="password" name="pass" placeholder="Password">
-				<span class="focus-input100"></span>
-				<span class="symbol-input100">
-				  <span class="lnr lnr-lock"></span>
-				</span>
-          </div>
-          
-          <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-              <input class="input100" type="password" name="pass" placeholder="Re-Password">
-              <span class="focus-input100"></span>
-              <span class="symbol-input100">
-                <span class="lnr lnr-lock"></span>
-              </span>
-         </div>
-
-		 <div class="contact100-form-checkbox m-l-4">
-			<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-			<label class="label-checkbox100" for="ckb1">
-                I've read The terms and conditions
-			</label>
-		 </div>
-					
-		 <div class="container-login100-form-btn p-t-25">
-		 <button class="login100-form-btn">
-			Sign up
-		 </button>
-		</div>
-
-				
-	   <div class="text-center w-full p-t-115" style="margin-top: -17%;">
-		 <span class="txt1">
-			Is a member?
-		 </span>
-
-		 <a class="txt1 bo1 hov1" href="Sgin_in.html">
-			Sign in now							
-		 </a>
-	  </div>
-  </form>
-</div>
-</div>
-</div>
-	
-	
-
+  <body>
+    <section class="m-box--sign-in" role="main">
+      <header class="m-box--box-sized">
+        <h1>
+			sign up <span>or <a href="Sgin_in.html">sign in </a></span>
+        </h1>
+        <a class="m-link--close" href="#">x </a>
+      </header>
+      <form class="m-form--sign-in">
+        <fieldset>
+          <span class="icon-envelope"></span><input placeholder="Email" required="" type="email" /><span class="m-field-error"></span>
+		</fieldset>
+		<fieldset>
+			<span class="icon-envelope"></span><input placeholder="user name" required="" type="email" /><span class="m-field-error"></span>
+		  </fieldset>
+        <fieldset>
+          <span class="icon-lock"></span><input placeholder="Password" required="" type="password" /><span class="m-field-error"></span>
+        </fieldset>
+        <div>
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
    
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-	<script src="../js/Sign-in.js"></script>
-
-</body>
+	</section>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  
+	  <script src="../js/Sign-in.js"></script>
+  </body>
 </html>

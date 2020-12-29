@@ -1,0 +1,284 @@
+
+
+
+// Smelly reset
+
+*{
+  margin: 0;
+  padding: 0;
+}
+// Color bases
+
+$white: #fff;
+$grey: #ccc;
+$pale-grey : #d8d8d8;
+$dark-grey: #c7d0d0;
+$black: #042422;
+$green: #43b1aa;
+$dark-green: #249991;
+$pale-green: #ebe5e4;
+$flash-green: #a9db48;
+$red: #da4e3b;
+
+// Color variables (stay cool, clean, and above all logic and semantic)
+
+$title           : $white;
+$contrasted-link : $white;
+$bg-form         : $white;
+$text-decoration : $white;
+$border-required : $white;
+$tooltip-message : $white;
+$submit          : $white;
+
+$bg-header       : $green;
+$submit-bg       : $green;
+$hover-signin    : $green;
+$close           : $green;
+
+$border-input    : $pale-grey;
+$field-icons     : $pale-grey;
+
+$password-link   : $grey;
+$submit-hover    : $grey;
+$field-focus     : $black;
+
+$submit-bg-hover : $dark-green;
+
+$bg-social-signin: $pale-green;
+$placeholder     : $grey;
+$valid           : $flash-green;
+$invalid         : $red;
+$hover-bg-signin : $dark-grey;
+
+
+html{
+  background: transparent url('http://fc00.deviantart.net/fs38/f/2008/346/c/5/Aurora_Blur_by_SkateAddiction.png') top center no-repeat;
+  background-size: 100%;
+  }
+body{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-size: .85em;
+}
+.m-box--box-sized{
+  box-sizing: border-box;
+ }
+.m-box--sign-in{
+  width: 450px;
+  padding: 0 0 0 100px;
+  min-height: 500px;
+  margin: 4em auto 0;
+  background: transparent url('http://farm8.staticflickr.com/7395/8892417152_c86b705b30_b.jpg') -250px center no-repeat;
+  }
+header{
+  background: $green;
+  width: 450px;
+  overflow: hidden;
+  position: relative;
+  padding: 3em 4em 3.5em 4em;
+  h1{
+    font-size: 3em;
+    font-weight: 300;
+    color: $title;
+    position: relative;
+    display: inline-block;
+    }
+  span{
+    font-size: .35em;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    }
+  a{
+    color: $contrasted-link;
+    text-decoration: none;
+    border-bottom: 1px solid $text-decoration;
+   }
+}
+.m-link--close{
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  border-bottom: 0 none;
+  font-weight: 700;
+  font-size: 2em;
+  color: $close;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  }
+.m-form--sign-in{
+  background: $bg-form;
+  padding: 1.5em 3em 1.3em 3em;
+  div{
+    margin: 2.5em 0 0;
+    a{
+      color: #ccc;
+      font-size: .8em
+      +float-right;
+      margin: 0 0 .5em;
+      }
+  }
+}
+button[type="submit"]{
+  font-family: 'Lato', sans-serif;
+  background: $submit-bg;
+  color: $submit;
+  border: 0 none;
+  display: block;
+  padding: .5em 0;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover{
+    background: $submit-bg-hover;
+    color: $submit-hover;
+  }
+}
+fieldset{
+  border: 1px solid $border-input;
+  margin: 0 0 .65em;
+  position: relative;
+  span{
+    color: $field-icons;
+    font-size: 1.2em;
+    text-align: center;
+    padding: .9em 0 0;
+    width: 10% !important ;// Dirty, but I needed to overwrite bootstrap things here
+    
+    &.m-field-error{
+      padding: 0;
+      width: auto;
+       }
+    }
+}
+    
+input{
+  &[type="text"],
+  &[type="email"],
+  &[type="password"]{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    line-height: 1;
+    border: 0px solid transparent;
+    @extend .m-box--box-sized;
+    width: 90%;
+    height: 2.6em;
+    line-height: 100%;
+    font-weight: 300;
+  &:focus{
+    color: $field-focus;
+  }
+  & + span:after{
+    display: none;
+   }
+  }
+}
+input:required{
+  border-right: 5px solid $border-required;
+}
+input:invalid:focus{
+  border-right: 5px solid $invalid;
+  & + span:after{
+    width: 250px;
+    display: block;
+    background: $invalid;
+    color: $tooltip-message;
+    padding: .6em 2em;
+    position: absolute;
+    top: 0;
+    right: -92%;
+  }
+  & + span:before{
+    content: '\25C2';
+    position: absolute;
+    font-size: 2em;
+    line-height: 1;
+    color: $invalid;
+    z-index: 2;
+    top: 8%;
+    right: -8%;
+  }
+  }
+input[type="email"]:invalid:focus{
+  & + span:after{
+    content: 'A good ol\' @provider.com address ;)'
+  }
+}
+input[type="password"]:invalid:focus{
+  & + span:after{
+    content: 'And, please, not your cat\'s name :)'
+  }
+  }
+input:valid:focus{
+  border-right: 5px solid $valid;
+  & + span:after{
+    width: 250px;
+    display: block;
+    background: $valid;
+    color: $tooltip-message;
+    padding: .6em 2em;
+    position: absolute;
+    top: 0;
+    right: -92%;
+  }
+  & + span:before{
+    content: '\25C2';
+    position: absolute;
+    font-size: 2em;
+    line-height: 1;
+    color: $valid;
+    z-index: 2;
+    top: 8%;
+    right: -8%;
+}
+ }
+input[type="email"]:valid:focus{
+  & + span:after{
+    content: 'You\'re ready for the next step !'
+  }
+}
+input[type="password"]:valid:focus{
+  & + span:after{
+    content: 'That\s a nice one !'
+  }
+}
+.m-list--other-sign-in{
+ 
+  a{
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    color: #bccccb;
+    font-size: 2em;
+    text-decoration: none;
+    display: block;
+    background: $bg-social-signin;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    &:hover{
+      background: $hover-bg-signin;
+      color: $hover-signin;
+    }
+    }
+  span{
+    display: none;
+  }
+  
+  }
+// Styling placeholders
+
+::-webkit-input-placeholder{
+  color: $placeholder;
+  font-size: 1em  ;
+  font-family: 'Lato', sans-serif;
+}
+::-webkit-validation-bubble{
+  display: none;
+}
